@@ -1,182 +1,167 @@
-/* Global Variables */
-:root {
-    --primary-color: #ff4d4d;
-    --secondary-color: #333;
-    --accent-color: #ffd700;
-    --text-color: #2c3e50;
-    --background-color: #f9f9f9;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Base Styles */
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    color: #333;
+    line-height: 1.6;
+    background: #f9f9f9;
 }
 
-/* Navigation */
+/* Navigation Bar */
 .navbar {
-    background: white;
+    background: #ff6f61;
+    color: #fff;
     padding: 1rem 2rem;
-    box-shadow: var(--shadow);
-    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
     top: 0;
     z-index: 1000;
 }
 
-.nav-links {
+.navbar .nav-links {
     display: flex;
-    gap: 2rem;
-    align-items: center;
+    list-style: none;
+    gap: 1.5rem;
 }
 
-/* Pizza Cards */
-.pizza-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.pizza-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    box-shadow: var(--shadow);
-}
-
-.pizza-card:hover {
-    transform: translateY(-5px);
-}
-
-.pizza-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-/* Order Form */
-.order-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-/* Buttons */
-.btn {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background: var(--primary-color);
+.navbar .nav-links a {
     color: white;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-.btn-primary:hover {
-    background: #ff3333;
-    transform: scale(1.05);
+.navbar .nav-links a:hover {
+    text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .pizza-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-    animation: fadeIn 0.5s ease forwards;
-}
-
-.loading-spinner {
-    width: 50px;
-    height: 50px;
-    border: 3px solid #f3f3f3;
-    border-top: 3px solid var(--primary-color);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.pizza-card .details {
-    padding: 1.5rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-.pizza-card:hover .details {
-    transform: translateY(0);
-}
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('pizza-bg.jpg');
-    background-size: cover;
-    color: white;
-}
-
-/* Form Inputs */
-input, select, textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-top: 0.5rem;
-}
-
-/* Footer */
-footer {
-    background: var(--secondary-color);
-    color: white;
-    padding: 2rem;
-    margin-top: 4rem;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: url('pizza-bg.jpg');
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 3rem 2rem;
+    height: 80vh;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn {
+    background: #fff;
+    color: #ff6f61;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: #ffe6e3;
+    color: #ff6f61;
+}
+
+/* Featured Section */
+.featured {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.feature {
+    flex: 1;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Special Offers Section */
+.special-offers {
+    padding: 3rem 2rem;
+    background: #ffe6e3;
+    text-align: center;
+}
+
+.deals-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.deal {
+    flex: 1;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.deal:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .footer-links a {
     color: white;
-    margin-left: 1rem;
     text-decoration: none;
+    font-size: 0.9rem;
 }
 
 .footer-links a:hover {
-    color: var(--accent-color);
+    text-decoration: underline;
 }
