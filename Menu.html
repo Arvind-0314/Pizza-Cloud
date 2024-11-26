@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Menu - PizzaCloud</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Menustyle.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <div class="logo">
+                <h1>PizzaCloud</h1>
+            </div>
+            <a href="pizza.html">Home</a>
+            <a href="#menu" class="active">Menu</a>
+            <a href="#order">Order</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="menu-header">
+        <h1>Our Pizza Selection</h1>
+        <p>Handcrafted with love and the finest ingredients</p>
+    </div>
+
+    <section class="menu-categories">
+        <button class="category-btn active">All</button>
+        <button class="category-btn">Vegetarian</button>
+        <button class="category-btn">Non-Vegetarian</button>
+        <button class="category-btn">Specialty</button>
+    </section>
+
+    <section class="pizza-grid">
+        <!-- Classic Pizzas -->
+        <div class="pizza-card">
+            <div class="pizza-badge">Bestseller</div>
+            <img src="margherita.jpg" alt="Margherita" class="pizza-image">
+            <div class="details">
+                <h3>Classic Margherita</h3>
+                <div class="pizza-tags">
+                    <span class="tag vegetarian">Vegetarian</span>
+                </div>
+                <p class="description">Fresh mozzarella, tomatoes, basil leaves, olive oil, and our signature sauce</p>
+                <div class="price-section">
+                    <p class="price">$12.99</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pizza-card">
+            <img src="pepperoni.jpg" alt="Pepperoni" class="pizza-image">
+            <div class="details">
+                <h3>Pepperoni Supreme</h3>
+                <div class="pizza-tags">
+                    <span class="tag non-veg">Non-Veg</span>
+                </div>
+                <p class="description">Double pepperoni, extra cheese, Italian seasoning</p>
+                <div class="price-section">
+                    <p class="price">$14.99</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Continue with 10 more pizza cards following the same structure -->
+    </section>
+</body>
+</html>

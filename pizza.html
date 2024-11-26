@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaCloud</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Demo.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <div class="logo">
+                <h1>PizzaCloud</h1>
+            </div>
+            <a href="#home">Home</a>
+            <a href="Menu.html">Menu</a>
+            <a href="#order">Order</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero fade-in">
+        <h1>Delicious Pizzas Delivered To Your Door</h1>
+        <p>Order now and get 20% off on your first order!</p>
+    </header>
+
+    <!-- Pizza Menu Section -->
+    <section id="menu" class="pizza-grid">
+        <!-- Pizza Card 1 -->
+        <div class="pizza-card fade-in">
+            <img src="Odessy.jpg" alt="Margherita Pizza" class="pizza-image">
+            <div class="details">
+                <h3>Margherita</h3>
+                <p>Fresh tomatoes, mozzarella, basil</p>
+                <p class="price">$12.99</p>
+                <button class="btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Pizza Card 2 -->
+        <div class="pizza-card fade-in">
+            <img src="pepperoni.jpg" alt="Pepperoni Pizza" class="pizza-image">
+            <div class="details">
+                <h3>Pepperoni</h3>
+                <p>Pepperoni, cheese, oregano</p>
+                <p class="price">$14.99</p>
+                <button class="btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Pizza Card 3 -->
+        <div class="pizza-card fade-in">
+            <img src="vegetarian.jpg" alt="Vegetarian Pizza" class="pizza-image">
+            <div class="details">
+                <h3>Vegetarian</h3>
+                <p>Bell peppers, mushrooms, onions</p>
+                <p class="price">$13.99</p>
+                <button class="btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="order-form fade-in">
+        <h2>Place Your Order</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Delivery Address</label>
+                <textarea id="address" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="pizza-size">Pizza Size</label>
+                <select id="pizza-size" required>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Payment Method</label>
+                <div class="payment-options">
+                    <input type="radio" id="cash" name="payment" value="cash">
+                    <label for="cash">Cash on Delivery</label>
+                    <input type="radio" id="card" name="payment" value="card">
+                    <label for="card">Card Payment</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Place Order</button>
+        </form>
+    </section>
+
+    <!-- Loading Spinner (Initially Hidden) -->
+    <div class="loading-spinner" style="display: none;"></div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 PizzaCloud. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
