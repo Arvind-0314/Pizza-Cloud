@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - PizzaCloud</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Cart_styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>PizzaCloud</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Cart Section -->
+    <main class="cart-page">
+        <div class="container">
+            <h1>Your Cart</h1>
+
+            <!-- Cart Items -->
+            <div class="cart-items" id="cart-items">
+                <!-- Items will be dynamically rendered here -->
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <h3>Cart Summary</h3>
+                <p>Subtotal: <span id="subtotal">$0.00</span></p>
+                <p>Tax (10%): <span id="tax">$0.00</span></p>
+                <p><strong>Total: <span id="total">$0.00</span></strong></p>
+                <button class="btn primary-btn checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 PizzaCloud. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
