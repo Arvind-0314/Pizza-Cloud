@@ -8,48 +8,63 @@
     <link rel="stylesheet" href="Menu_styles.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-links">
+        <div class="container">
             <div class="logo">
                 <h1>PizzaCloud</h1>
             </div>
-            <a href="index.html">Home</a>
-            <a href="#menu" class="active">Menu</a>
-            <a href="#order">Order</a>
-            <a href="#contact">Contact</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
+    <!-- Menu Header -->
     <div class="menu-header">
         <h1>Our Pizza Selection</h1>
         <p>Handcrafted with love and the finest ingredients</p>
     </div>
 
+    <!-- Categories Section -->
     <section class="menu-categories">
-        <button class="category-btn active">All</button>
-        <button class="category-btn">Vegetarian</button>
-        <button class="category-btn">Non-Vegetarian</button>
-        <button class="category-btn">Specialty</button>
+        <button class="category-btn active"><a href="Menu.html">All</a></button>
+        <button class="category-btn" href="veg.html"><a href="veg.html">Veg</a></button>
+        <button class="category-btn"href="non-veg.html"><a href="non-veg.html">Non-Veg</a></button>
+        <button class="category-btn"><a href="Menu.html">Speciality</a></button>
     </section>
 
+    <!-- Pizza Grid Section -->
     <section class="pizza-grid">
-        <!-- Classic Pizzas -->
+        <!-- Pizza Card Example -->
         <div class="pizza-card">
             <div class="pizza-badge">Bestseller</div>
             <img src="margherita.jpg" alt="Margherita" class="pizza-image">
             <div class="details">
                 <h3>Classic Margherita</h3>
                 <div class="pizza-tags">
-                    <span class="tag vegetarian">Vegetarian</span>
+                    <span class="tag vegetarian">Veg</span>
                 </div>
-                <p class="description">Fresh mozzarella, tomatoes, basil leaves, olive oil, and our signature sauce</p>
+                <p class="description">Fresh mozzarella, tomatoes, basil leaves, olive oil, and our signature sauce.</p>
+                <div class="size-section">
+                    <label for="size">Choose Size:</label>
+                    <select class="size-selector" onchange="updatePrice(this, 12.99, 15.99, 18.99)">
+                        <option value="small">Small - $12.99</option>
+                        <option value="medium">Medium - $15.99</option>
+                        <option value="large">Large - $18.99</option>
+                    </select>
+                </div>
                 <div class="price-section">
-                    <p class="price">$12.99</p>
+                    <p class="price" id="price">Price: $12.99</p>
                     <button class="btn btn-primary">Add to Cart</button>
                 </div>
             </div>
         </div>
 
+        <!-- Add more pizza cards with size selection -->
         <div class="pizza-card">
             <img src="pepperoni.jpg" alt="Pepperoni" class="pizza-image">
             <div class="details">
@@ -57,15 +72,278 @@
                 <div class="pizza-tags">
                     <span class="tag non-veg">Non-Veg</span>
                 </div>
-                <p class="description">Double pepperoni, extra cheese, Italian seasoning</p>
+                <p class="description">Double pepperoni, extra cheese, Italian seasoning.</p>
+                <div class="size-section">
+                    <label for="size">Choose Size:</label>
+                    <select class="size-selector" onchange="updatePrice(this, 14.99, 17.99, 20.99)">
+                        <option value="small">Small - $14.99</option>
+                        <option value="medium">Medium - $17.99</option>
+                        <option value="large">Large - $20.99</option>
+                    </select>
+                </div>
                 <div class="price-section">
-                    <p class="price">$14.99</p>
+                    <p class="price" id="price">Price: $14.99</p>
                     <button class="btn btn-primary">Add to Cart</button>
                 </div>
             </div>
         </div>
-
-        <!-- Continue with 10 more pizza cards following the same structure -->
+        <div class="pizza-card">
+            <div class="pizza-badge">Bestseller</div>
+            <img src="margherita.jpg" alt="Margherita" class="pizza-image">
+            <div class="details">
+                <h3>Farmhouse</h3>
+                <div class="pizza-tags">
+                    <span class="tag vegetarian">Veg</span>
+                </div>
+                <p class="description">Delightful combination of onion, capsicum, tomato & grilled mushroom.</p>
+                <div class="size-section">
+                    <label for="size">Choose Size:</label>
+                    <select class="size-selector" onchange="updatePrice(this, 12.99, 15.99, 18.99)">
+                        <option value="small">Small - $12.99</option>
+                        <option value="medium">Medium - $15.99</option>
+                        <option value="large">Large - $18.99</option>
+                    </select>
+                </div>
+                <div class="price-section">
+                    <p class="price" id="price">Price: $12.99</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="pizza-card">
+            <img src="pepperoni.jpg" alt="Pepperoni" class="pizza-image">
+            <div class="details">
+                <h3>Pepperoni Supreme</h3>
+                <div class="pizza-tags">
+                    <span class="tag non-veg">Non-Veg</span>
+                </div>
+                <p class="description">Double pepperoni, extra cheese, Italian seasoning.</p>
+                <div class="size-section">
+                    <label for="size">Choose Size:</label>
+                    <select class="size-selector" onchange="updatePrice(this, 14.99, 17.99, 20.99)">
+                        <option value="small">Small - $14.99</option>
+                        <option value="medium">Medium - $17.99</option>
+                        <option value="large">Large - $20.99</option>
+                    </select>
+                </div>
+                <div class="price-section">
+                    <p class="price" id="price">Price: $14.99</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="pizza-card">
+            <div class="pizza-badge">Bestseller</div>
+            <img src="margherita.jpg" alt="Margherita" class="pizza-image">
+            <div class="details">
+                <h3>Fresh Veggie</h3>
+                <div class="pizza-tags">
+                    <span class="tag vegetarian">Veg</span>
+                </div>
+                <p class="description">Delecatble combination of onion & capsicum, a veggie lover pick.</p>
+                <div class="size-section">
+                    <label for="size">Choose Size:</label>
+                    <select class="size-selector" onchange="updatePrice(this, 12.99, 15.99, 18.99)">
+                        <option value="small">Small - $12.99</option>
+                        <option value="medium">Medium - $15.99</option>
+                        <option value="large">Large - $18.99</option>
+                    </select>
+                </div>
+                <div class="price-section">
+                    <p class="price" id="price">Price: $12.99</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="pizza-card">
+            <img src="pepperoni.jpg" alt="Pepperoni" class="pizza-image">
+            <div class="details">
+                <h3>Pepperoni Supreme</h3>
+                <div class="pizza-tags">
+                    <span class="tag non-veg">Non-Veg</span>
+                </div>
+                <p class="description">Double pepperoni, extra cheese, Italian seasoning.</p>
+                <div class="size-section">
+                    <label for="size">Choose Size:</label>
+                    <select class="size-selector" onchange="updatePrice(this, 14.99, 17.99, 20.99)">
+                        <option value="small">Small - $14.99</option>
+                        <option value="medium">Medium - $17.99</option>
+                        <option value="large">Large - $20.99</option>
+                    </select>
+                </div>
+                <div class="price-section">
+                    <p class="price" id="price">Price: $14.99</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="pizza-card">
+            <div class="pizza-badge">Bestseller</div>
+            <img src="margherita.jpg" alt="Margherita" class="pizza-image">
+            <div class="details">
+                <h3>Cheese n Corn</h3>
+                <div class="pizza-tags">
+                    <span class="tag vegetarian">Veg</span>
+                </div>
+                <p class="description">A delectable combination sweet and juicy golden corn.</p>
+                <div class="size-section">
+                    <label for="size">Choose Size:</label>
+                    <select class="size-selector" onchange="updatePrice(this, 12.99, 15.99, 18.99)">
+                        <option value="small">Small - $12.99</option>
+                        <option value="medium">Medium - $15.99</option>
+                        <option value="large">Large - $18.99</option>
+                    </select>
+                </div>
+                <div class="price-section">
+                    <p class="price" id="price">Price: $12.99</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="pizza-card">
+            <img src="pepperoni.jpg" alt="Pepperoni" class="pizza-image">
+            <div class="details">
+                <h3>Pepperoni Supreme</h3>
+                <div class="pizza-tags">
+                    <span class="tag non-veg">Non-Veg</span>
+                </div>
+                <p class="description">Double pepperoni, extra cheese, Italian seasoning.</p>
+                <div class="size-section">
+                    <label for="size">Choose Size:</label>
+                    <select class="size-selector" onchange="updatePrice(this, 14.99, 17.99, 20.99)">
+                        <option value="small">Small - $14.99</option>
+                        <option value="medium">Medium - $17.99</option>
+                        <option value="large">Large - $20.99</option>
+                    </select>
+                </div>
+                <div class="price-section">
+                    <p class="price" id="price">Price: $14.99</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="pizza-card">
+            <div class="pizza-badge">Bestseller</div>
+            <img src="margherita.jpg" alt="Margherita" class="pizza-image">
+            <div class="details">
+                <h3>Peppy Paneer</h3>
+                <div class="pizza-tags">
+                    <span class="tag vegetarian">Veg</span>
+                </div>
+                <p class="description">Flavorful trio of juicy paneer, crisp capsicum wih spicy red paprika.</p>
+                <div class="size-section">
+                    <label for="size">Choose Size:</label>
+                    <select class="size-selector" onchange="updatePrice(this, 12.99, 15.99, 18.99)">
+                        <option value="small">Small - $12.99</option>
+                        <option value="medium">Medium - $15.99</option>
+                        <option value="large">Large - $18.99</option>
+                    </select>
+                </div>
+                <div class="price-section">
+                    <p class="price" id="price">Price: $12.99</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="pizza-card">
+            <img src="pepperoni.jpg" alt="Pepperoni" class="pizza-image">
+            <div class="details">
+                <h3>Pepperoni Supreme</h3>
+                <div class="pizza-tags">
+                    <span class="tag non-veg">Non-Veg</span>
+                </div>
+                <p class="description">Double pepperoni, extra cheese, Italian seasoning.</p>
+                <div class="size-section">
+                    <label for="size">Choose Size:</label>
+                    <select class="size-selector" onchange="updatePrice(this, 14.99, 17.99, 20.99)">
+                        <option value="small">Small - $14.99</option>
+                        <option value="medium">Medium - $17.99</option>
+                        <option value="large">Large - $20.99</option>
+                    </select>
+                </div>
+                <div class="price-section">
+                    <p class="price" id="price">Price: $14.99</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+        <div class="pizza-card">
+            <div class="pizza-badge">Bestseller</div>
+            <img src="margherita.jpg" alt="Margherita" class="pizza-image">
+            <div class="details">
+                <h3>Indi Tandoori Paneer</h3>
+                <div class="pizza-tags">
+                    <span class="tag vegetarian">Veg</span>
+                </div>
+                <p class="description">It is hot. I is spicy. It is oh-so-Indian. Tandoori paneer with capsicum, red paprika & mint mayo</p>
+                <div class="size-section">
+                    <label for="size">Choose Size:</label>
+                    <select class="size-selector" onchange="updatePrice(this, 12.99, 15.99, 18.99)">
+                        <option value="small">Small - $12.99</option>
+                        <option value="medium">Medium - $15.99</option>
+                        <option value="large">Large - $18.99</option>
+                    </select>
+                </div>
+                <div class="price-section">
+                    <p class="price" id="price">Price: $12.99</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="pizza-card">
+            <img src="pepperoni.jpg" alt="Pepperoni" class="pizza-image">
+            <div class="details">
+                <h3>Pepperoni Supreme</h3>
+                <div class="pizza-tags">
+                    <span class="tag non-veg">Non-Veg</span>
+                </div>
+                <p class="description">Double pepperoni, extra cheese, Italian seasoning.</p>
+                <div class="size-section">
+                    <label for="size">Choose Size:</label>
+                    <select class="size-selector" onchange="updatePrice(this, 14.99, 17.99, 20.99)">
+                        <option value="small">Small - $14.99</option>
+                        <option value="medium">Medium - $17.99</option>
+                        <option value="large">Large - $20.99</option>
+                    </select>
+                </div>
+                <div class="price-section">
+                    <p class="price" id="price">Price: $14.99</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 PizzaCloud. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#terms">Terms & Conditions</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Function to update price based on selected size
+        function updatePrice(select, smallPrice, mediumPrice, largePrice) {
+            let priceElement = select.closest('.pizza-card').querySelector('.price');
+            let selectedSize = select.value;
+            let price = 0;
+
+            if (selectedSize === 'small') {
+                price = smallPrice;
+            } else if (selectedSize === 'medium') {
+                price = mediumPrice;
+            } else if (selectedSize === 'large') {
+                price = largePrice;
+            }
+
+            priceElement.textContent = `Price: $${price.toFixed(2)}`;
+        }
+    </script>
 </body>
 </html>
